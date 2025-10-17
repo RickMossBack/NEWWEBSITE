@@ -1,0 +1,1 @@
+Put your cover images here, e.g., vapor-void-cover.jpg

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rick Moss — Mixtapes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/images/favicon.ico" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Rick Moss</h1>
+      <nav>
+        <a href="index.html" class="active">Mixtapes</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Mixtapes</h2>
+        <p class="subtitle">Press play. Download. Share. Built with pure HTML/CSS/JS.</p>
+      </section>
+
+      <section id="mixtape-grid" class="grid">
+        <!-- Cards injected from data/mixtapes.json by js/player.js -->
+      </section>
+
+      <section class="player-card">
+        <div class="player-meta">
+          <img id="cover" alt="cover" src="" />
+          <div>
+            <div id="now-album" class="album">—</div>
+            <div id="now-track" class="track">—</div>
+            <div id="now-extra" class="extra">—</div>
+          </div>
+        </div>
+
+        <div class="progress" id="progress" aria-label="seek bar">
+          <div class="bar" id="progressBar"></div>
+        </div>
+        <div class="time-row">
+          <span id="currentTime">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
+
+        <div class="controls">
+          <button id="prevBtn" title="Previous">⏮</button>
+          <button id="playPauseBtn" title="Play/Pause">▶️</button>
+          <button id="stopBtn" title="Stop">⏹</button>
+          <button id="nextBtn" title="Next">⏭</button>
+          <button id="loopBtn" title="Loop">🔁</button>
+          <button id="shuffleBtn" title="Shuffle">🔀</button>
+
+          <label class="vol">
+            🔊
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="0.9">
+          </label>
+          <a id="downloadLink" class="download" href="#" download>Download</a>
+        </div>
+
+        <audio id="audio" preload="metadata"></audio>
+      </section>
+
+      <section class="how-to">
+        <h3>How to add your own files</h3>
+        <ol>
+          <li>Put your MP3/WAV files into <code>assets/audio/&lt;tape-folder&gt;/</code> (e.g., <code>assets/audio/vapor-void/01-intro.mp3</code>).</li>
+          <li>Drop your cover art into <code>assets/images/</code> (e.g., <code>assets/images/vapor-void-cover.jpg</code>).</li>
+          <li>Edit <code>data/mixtapes.json</code> to list your tapes and tracks. Use relative paths (see the example in that file).</li>
+          <li>Open <code>index.html</code> in your browser or deploy the whole folder to Vercel/Netlify/GitHub Pages.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">© <span id="year"></span> Rick Moss — Static site. No framework.</footer>
+    <script src="js/player.js"></script>
+  </body>
+</html>
