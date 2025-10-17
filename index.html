@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="assets/images/favicon.ico" />
   </head>
+
   <body>
     <header class="site-header">
       <h1>Rick Moss</h1>
@@ -40,6 +41,7 @@
         <div class="progress" id="progress" aria-label="seek bar">
           <div class="bar" id="progressBar"></div>
         </div>
+
         <div class="time-row">
           <span id="currentTime">0:00</span>
           <span id="duration">0:00</span>
@@ -62,19 +64,12 @@
 
         <audio id="audio" preload="metadata"></audio>
       </section>
-
-      <section class="how-to">
-        <h3>How to add your own files</h3>
-        <ol>
-          <li>Put your MP3/WAV files into <code>assets/audio/&lt;tape-folder&gt;/</code> (e.g., <code>assets/audio/vapor-void/01-intro.mp3</code>).</li>
-          <li>Drop your cover art into <code>assets/images/</code> (e.g., <code>assets/images/vapor-void-cover.jpg</code>).</li>
-          <li>Edit <code>data/mixtapes.json</code> to list your tapes and tracks. Use relative paths (see the example in that file).</li>
-          <li>Open <code>index.html</code> in your browser or deploy the whole folder to Vercel/Netlify/GitHub Pages.</li>
-        </ol>
-      </section>
     </main>
 
-    <footer class="site-footer">© <span id="year"></span> Rick Moss — Static site. No framework.</footer>
+    <footer class="site-footer">
+      © <span id="year"></span> Rick Moss — Static site. No framework.
+    </footer>
+
     <script src="js/player.js"></script>
   </body>
 </html>
