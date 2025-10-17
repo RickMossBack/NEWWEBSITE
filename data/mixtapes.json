@@ -7,7 +7,7 @@
     "tracks": [
       {
         "title": "Keep Going",
-        "src": "assets/audio/one/keepGOING_rough_10.17.wav",
+        "src": "assets/audio/keepGOING_rough_10.17.wav",
         "bpm": 92,
         "key": "C-Minor"
       },
